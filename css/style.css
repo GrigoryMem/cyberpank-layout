@@ -282,14 +282,14 @@ margin-top:20px;
 	height: 100vh;
 	z-index: 1;
 	opacity: 1;
-	/* animation: picture 10s  infinite; */
+	animation: picture 10s  infinite;
 }
 
 
 @media(max-width:1024px){
 	.intro{
 		background-image: url("../img/hero-1024.jpg");
-		/* animation: picture-1024 10s  infinite; */
+		animation: picture-1024 10s  infinite;
 	}
 	
 }
@@ -297,6 +297,7 @@ margin-top:20px;
 @media(max-width:430px){
 	.intro{
 		padding-bottom:50px;
+		animation: picture-1024 10s  infinite;
 	}
 
 	.intro:after{
@@ -309,10 +310,10 @@ margin-top:20px;
 	}
 }
 
-@media(max-width:320px){
+@media(max-width:430px){
 	.intro{
 		background-image: url("../img/hero-430.jpg");
-		/* animation: picture-430 10s  infinite; */
+		animation: picture-430 10s  infinite;
 	}
 	
 }
@@ -353,11 +354,6 @@ margin-top:20px;
 		
 	}
 
-	/* 100%{
-		background: url("/img/hero3.jpg") no-repeat;
-		opacity: 1;
-		transition: opacity 7s ease-in-out;
-	} */
 } 
 
 @keyframes picture-1024{
@@ -396,11 +392,7 @@ margin-top:20px;
 		
 	}
 
-	/* 100%{
-		background: url("/img/hero3.jpg") no-repeat;
-		opacity: 1;
-		transition: opacity 7s ease-in-out;
-	} */
+	
 } 
 @keyframes picture-430{
 	0%{
@@ -438,11 +430,7 @@ margin-top:20px;
 		
 	}
 
-	/* 100%{
-		background: url("/img/hero3.jpg") no-repeat;
-		opacity: 1;
-		transition: opacity 7s ease-in-out;
-	} */
+	
 } 
 
 
@@ -634,15 +622,7 @@ margin-top:20px;
 }
 
 
-@media  (max-height:568px){
-	.intro{
-		
-		background-image: url("../img/hero.jpg");
 
-	}
-
-
-}
 
 
 @media  (max-height:520px){
