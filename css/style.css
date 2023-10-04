@@ -6,6 +6,21 @@
 	border: 0;
 	box-sizing: border-box;
 }
+
+:root{
+
+	--clipPath50:polygon(
+		0% 13%,     /* верхняя левая */
+		8% 0%,     /* верхняя левая */
+		100% 0%,    /* верхняя правая */
+		100% 0%,   /* верхняя правая */
+		100% 87%,  /* нижняя правая */
+		92% 100%,  /* нижняя правая */
+		0% 100%,   /* нижняя левая */
+		0 100%      /* нижняя левая */
+	  );
+
+}
 a {
 	text-decoration: none;
 	color:inherit;
@@ -103,6 +118,13 @@ svg path {
 		font-size:30px;
 		text-align: center;
 	}
+}
+
+
+.text {
+
+line-height: 1.888;
+
 }
 
 
@@ -370,16 +392,7 @@ margin-top:20px;
 	background-color: #F8F200;
 	max-width: 624px;
 	z-index: 1000;
-	clip-path:  polygon(
-		0% 13%,     /* верхняя левая */
-		8% 0%,     /* верхняя левая */
-		100% 0%,    /* верхняя правая */
-		100% 0%,   /* верхняя правая */
-		100% 87%,  /* нижняя правая */
-		92% 100%,  /* нижняя правая */
-		0% 100%,   /* нижняя левая */
-		0 100%      /* нижняя левая */
-	  );
+	clip-path:  var(--clipPath50);
 		 
 }
 
@@ -421,13 +434,16 @@ margin-top:20px;
 		
 	}
 }
+
+
+
 .intro__title{
 	
 	margin-top:22px;
-	color:#000000; 
-	/* background-image: url(https://media.giphy.com/media/3oEduLeaoCojUXv3Lq/giphy.gif);
+	color:transparent; 
+	background-image: url(https://media.giphy.com/media/3oEduLeaoCojUXv3Lq/giphy.gif);
 	background-clip:text;
-	-webkit-background-clip:text; */
+	-webkit-background-clip:text;
 	
 }
 
@@ -449,22 +465,9 @@ margin-top:20px;
 	background-color: #000000;
 	color:#F8F200;
 }
-
-
-
-
 .button:hover{
 	color:#2e959e;
 }
-
-
-
-
-
-
-
-
-
 
 @media  (max-height:999px){
 	
@@ -494,10 +497,6 @@ margin-top:20px;
 
 	
 }
-
-
-
-
 
 @media  (max-height:520px){
 
@@ -570,5 +569,44 @@ margin-top:20px;
 }
 
 
+/* Promo----------------------------------------------------------------------------- */
 
+
+.promo {
+	padding:70px 0;
+}
+.promo__container {
+}
+.container {
+}
+.promo__wrapper {
+}
+.promo__descript {
+}
+.promo__title:not(:last-child) {
+	margin-bottom:25px
+}
+.title {
+}
+.promo__text {
+		color:#777777;
+		width: 100%;
+		max-width: 952px;
+}
+
+.promo__text{
+	margin-bottom: 70px;
+}
+
+._text-blue {
+}
+.promo__scrShoots {
+}
+.scrShoots {
+}
+.scrShoots__item {
+}
+.scrShoots__item img {
+	clip-path:  var(--clipPath50);
+}
 
