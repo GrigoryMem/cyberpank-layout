@@ -1,28 +1,24 @@
-const intro = document.querySelector(".intro");
-
-console.log(intro)
-
-let hero1 = "intro__theme_1";
-let hero2 = "intro__theme_2";
-let hero3 = "intro__theme_3";
+const imagesPromo = document.querySelectorAll(".scrShoots__item")
 
 
+const prtSrc = "./img/promo/screen";
 
-// setInterval(()=>{
+const sourcesImages = [prtSrc +"-1-600.jpg",prtSrc +"-2-600.jpg",prtSrc +"-3-600.jpg",]
 
-//     if(intro.classList.contains(hero1)){
-//         intro.classList.toggle(hero2);
+
+// document.documentElement.clientWidth<=600 && document.documentElement.clientHeight<=990
+
+
+// window.addEventListener("resize",()=>{
+//     if(window.innerWidth<=600){
+//         imagesPromo.forEach((item,index)=>{
+//             item.childNodes[1].src=sourcesImages[index];
+//             console.log("hello")
+//          })
 //     }
-//     if(intro.classList.contains(hero2)){
-//         intro.classList.toggle(hero3);
+// },true)
 
-//     }
-//     if(intro.classList.contains(hero3)){
-//         intro.classList.toggle(hero1);
-
-//     }
-
-    
-    
    
-// },2000)
+ 
+
+
