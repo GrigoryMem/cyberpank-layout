@@ -92,24 +92,27 @@
                              консоль <span  class="_text-blue">Xbox Series X</span> или <span  class="_text-blue">Sony PlayStation 5</span>! Заполни форму ниже и приложи скриншот о покупке игры. 
                              Итоги розыгрыша будут подведены 1 февраля. Удачи! ;)</p>
                         <div class="feedback__more">
-                            <form class="feedback__form form" action="">
-                                <label id="name-label" for="name"><span>Enter your name</span>
+                            <form class="feedback__form form" action="" method="get">
+                                <label id="name-label" for="name">
                                     <input id="name" class="form__name" type="text" placeholder="Как тебя зовут?" autocomplete="off">
 
                                 </label>
-                                <label id="emai-label" for="name"><span>Enter your E-mail</span>
+                                <label id="emai-label" for="name">
                                     <input id="email" class="form__email" type="email" placeholder="Твой e-mail" autocomplete="off">
 
                                 </label>
-                                <label id="file-label" class="file-label" for="file"><span>Put up screenshoot</span>
+                                <label id="file-label" class="file-label" for="file">
                                     <input id="file" type="file" class="form__file" accept=".png, .jpg, .pdf" placeholder="прикрепить скриншот">
                                     <div class="file-label__text">
                                         <div class="file-label__subscribe">Прикрепить скриншот</div>
                                         <div class="file-label__type">.png / .jpg / .pdf</div>
                                     </div>
                                 </label>
-                                <button type="submit" class="form__submit" id="submit">Отправить</button>    
-                                <label for="checkbox "><input id="checkbox" class="form__checkbox" type="checkbox" >Согласен на обработку персональных данных</label> 
+                                <button type="submit"  class="form__submit" id="submit" value="">Отправить</button>    
+                                <label class="label-checkbox" for="checkbox">
+                                    <input id="checkbox" class="form__checkbox" type="checkbox" >
+                                    <span class="form__agreement">Согласен на обработку персональных данных</span>
+                                </label> 
                             </form>
                             <img src="./img/feedback/Layer 1a.png" alt="console XBOX" class="feedback__pict _left-pict">
                             <img src="./img/feedback/Layer 1b.png" alt="console PS5" class="feedback__pict _right-pict">
