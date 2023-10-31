@@ -9,6 +9,10 @@
 
 :root{
 
+	--white:#ffffff;
+	--yellow:#F8F200;
+	--grey:#777777;
+
 	--clipPath430:polygon(
 		0% 20%,     /* верхняя левая */
 		12% 0%,     /* верхняя левая */
@@ -607,7 +611,10 @@ margin-top:20px;
 
 
 .promo {
-	padding:70px 0;
+	margin-top:70px;
+	margin-bottom:80px;
+	position: relative;
+	z-index: 1000;
 }
 @media(max-width:600px){
 	.promo__container{
@@ -817,3 +824,243 @@ margin-top:20px;
 		
 	}
 }
+
+
+/* feedback============================================================== */
+
+.feedback {
+	
+	position:relative;
+	background: #000000;
+	z-index: 900;
+	overflow: hidden;
+	
+
+	margin:-80px 0;
+	padding:0 0 70px;
+	
+}
+section ~.feedback  ~ section{
+
+	/* border:1px solid red; */
+}
+
+.feedback:before,
+.feedback:after{
+	content:"";
+	display: block;
+	position: absolute;
+	height:160px;
+	width: 100%;
+	
+	filter: contrast(700%) brightness(120%);
+	
+	
+	z-index: 5;
+}
+.feedback:before{
+	top:-1px;
+	left:0;
+	background: 
+	  linear-gradient(0, rgba(0,0,0,1), rgba(0,0,0,0)),
+	  url(../img/feedback/noise/noise.svg),
+	  var(--white);
+	
+	
+}
+
+.feedback:after{
+	bottom:0px;
+	left:0;
+	transform: rotate(180deg);
+	background: 
+	  linear-gradient(0, rgba(0,0,0,1), rgba(0,0,0,0)),
+	  url(../img/feedback/noise/noise.svg),
+	  var(--yellow);
+}
+
+.feedback__wrapper{
+	position: relative;
+    padding: 110px 0 160px;
+    z-index: 100;
+	
+}
+.feedback__benefit {
+	
+
+}
+.benefit {
+	display: flex;
+	align-items: center;
+	
+}
+
+.benefit__link{
+	display: block;
+	
+	
+
+}
+.benefit__logo {
+	display: block;
+	margin-right: 32px;
+	
+}
+.feedback__title {
+	padding-top: 40px;
+	color:var(--white);
+	
+}
+
+.feedback__text {
+	color:var(--white);
+	max-width: 952px;
+	margin: 25px 0 44px;
+}
+.text {
+}
+._text-blue {
+}
+.feedback__more {
+	display: flex;
+}
+.feedback__form {
+	padding:73px 32px 0;
+}
+.form {
+	color:var(--grey);
+	max-width: 460px;
+	font-weight: 300;
+
+
+}
+.form label{
+	display: block;
+}
+.form label:not(:last-child){
+	margin-bottom: 35px;
+}
+.form label>span{
+	color:transparent;
+	font-size: 0;
+	padding:0;
+	display: none;
+}
+.form input{
+	font-family:inherit;
+	font-size:inherit;
+	color:var(--grey);
+	line-height: auto;
+	margin: 0;
+	outline: none;
+	border:none;
+	padding-bottom: 13px;
+}
+
+
+
+.form input[type=text],
+.form input[type=email]{
+	background-color: transparent;
+	width:100%;
+	
+	
+	border-bottom:1px solid var(--grey);
+	transition: all .4s ease-in-out;
+}
+
+.form input[type]:focus:not(input[type=file]) {
+	border-bottom:1px solid var(--white);
+
+  }
+
+  .form input::placeholder{
+	color:var(--grey);
+	}
+	  input[type=text]:focus::-webkit-input-placeholder,
+	  input[type=email]:focus::-webkit-input-placeholder  {
+		color:var(--white);
+		font-weight: 400;
+		transition: all .4s ease-in-out;
+		
+	}
+
+
+.file-label{
+	display: block;
+	width: 100%;
+	/* max-width: 186px; */
+	padding:39px 0px;
+	border: 1px dashed var(--grey);
+	text-align:center;
+	background-color: transparent;
+	
+	}
+.form input[type=file]{
+	display: none;
+	opacity: 0;
+	visibility: hidden;
+
+}
+.file-label {
+	
+	color:var(--white);
+}
+.file-label__text {
+	/* max-width: 186px; */
+	width: 100%;
+	margin: 0 auto;
+	
+}
+.file-label__subscribe {
+
+	text-decoration: underline;
+	margin-bottom: 7px;
+}
+.file-label__type {
+	font-size: 12px;
+}
+
+
+
+
+.form__name {
+}
+.form__email {
+}
+.form__file {
+}
+.form__submit {
+}
+.form__checkbox {
+}
+.feedback__pict {
+}
+
+
+._left-pict{
+
+}
+
+._right-pict{
+
+}
+
+
+.yellow{
+	margin-top:40px;
+	position: relative;
+	z-index: 1000;
+	background-color: var(--yellow);
+}
+
+._left-pict img{
+	background-image: url("Слой 2.png");
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 296px;
+	height: 351px;
+	z-index: 1;
+  }
+  
