@@ -513,10 +513,12 @@ margin-top:20px;
 	font-size:24px;
 	background-color: var(--black);
 	color:var(--yellow);
+	transition: all .5s ease-in-out;
 
 }
 .button:hover{
-	color:var(--blue);
+	background-color:var(--blue);
+	color:var(--black);
 }
 
 @media  (max-height:999px){
