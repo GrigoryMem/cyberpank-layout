@@ -997,14 +997,73 @@ section ~.feedback  ~ section{
 
 .file-label{
 	display: block;
+	position: relative;
 	width: 100%;
 	/* max-width: 186px; */
 	padding:39px 0px;
-	border: 1px dashed var(--grey);
+	/* border-bottom: 1px dashed var(--grey); */
 	text-align:center;
 	background-color: transparent;
 	
 	}
+/* Рамка */
+
+.file-label_hr,
+.file-label_vr{
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+}
+.file-label_hr {
+		background-image: linear-gradient(to right, var(--grey) 60%, transparent 40%);
+		background-size: 10px 1px;
+		background-repeat: repeat-x;
+	}
+
+	
+	
+.file-label_vr{
+		background-image: linear-gradient(to bottom, var(--grey) 60%, transparent 40%);
+		background-size: 1px 10px;
+		background-repeat: repeat-y;
+	}
+
+	.file-label_hr:before,
+	.file-label_vr:before{
+		content: "";
+		display: block;
+		position: absolute;
+		z-index: 1000;
+	}
+
+	.file-label_hr:before{
+		top:100%;
+		left:0;
+		width: 100%;
+		height: 1px;
+	   	background-image: linear-gradient(to right, var(--grey) 60%, transparent 40%);
+		background-size: 10px 1px;
+		background-repeat: repeat-x;
+	}
+
+	.file-label_vr:before{
+		top:0;
+		right:0px;
+		width: 1px;
+		height:100%;
+	   	background-image: linear-gradient(to bottom, var(--grey) 60%, transparent 40%);
+		background-size: 1px 10px;
+		background-repeat: repeat-y;
+		
+	}
+
+
+	/* конец рамки */
+
+
+
 .form input[type=file]{
 	display: none;
 	opacity: 0;
@@ -1152,4 +1211,3 @@ section ~.feedback  ~ section{
 	height: 351px;
 	z-index: 1;
   }
-  
