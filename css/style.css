@@ -513,7 +513,7 @@ margin-top:20px;
 	font-size:24px;
 	background-color: var(--black);
 	color:var(--yellow);
-	transition: all .5s ease-in-out;
+	transition: all .3s ease-in-out;
 
 }
 .button:hover{
@@ -854,6 +854,13 @@ margin-top:20px;
 	padding:0 0 70px;
 	
 }
+
+.feedback__container{
+
+	position: relative;
+	z-index: 1000;
+
+}
 section ~.feedback  ~ section{
 
 	/* border:1px solid red; */
@@ -950,14 +957,24 @@ section ~.feedback  ~ section{
 
 
 }
-.form label{
+.form .label{
 	display: block;
+	position: relative;
 }
+
+
+
+
+
+
+
+
 .form label:not(:last-child){
 	margin-bottom: 35px;
 }
 
 .form input{
+	position: relative;
 	font-family:inherit;
 	font-size:inherit;
 	color:var(--grey);
@@ -967,6 +984,8 @@ section ~.feedback  ~ section{
 	border:none;
 	padding-bottom: 13px;
 }
+
+
 
 
 
@@ -981,7 +1000,7 @@ section ~.feedback  ~ section{
 }
 
 .form input[type]:focus:not(input[type=file]) {
-	border-bottom:1px solid var(--white);
+	/* border-bottom:1px solid var(--white); */
 
   }
 
@@ -990,13 +1009,66 @@ section ~.feedback  ~ section{
 	}
 	  input[type=text]:focus::-webkit-input-placeholder,
 	  input[type=email]:focus::-webkit-input-placeholder  {
-		color:var(--white);
+		color:var(--blue);
 		font-weight: 400;
 		transition: all .4s ease-in-out;
 		
 	}
+	input[type=text]+span,
+	input[type=email]+span {
+		display: block;
+		position: relative;
+		width: 100%;
+		
+		
+		
+	}
+	input[type=text]+span:after,
+	input[type=email]+span:after{
+		content:'';
+		display: block;
+		position: absolute;
+		opacity: 0;
+		bottom:0;
+		left:0;
+		width: 0;
+		height: 1px;
+		background-color: var(--blue);
+		z-index: 10;
+		transition: opacity .4s ease-in-out;
+	}
+
+	input[type=text]:focus+span:after,
+	input[type=email]:focus+span:after{
+		
+		opacity: 1;
+		animation:showBorder .9s;
+		width: 100%;
+		
+	}
 
 
+	@keyframes  showBorder{
+		0%{
+			width: 0;
+			
+			/* transition: all .8s linear; */
+			
+		}
+		
+		100%{
+			width: 100%;
+		
+			/* transition: all .8s linear; */
+
+			
+		}
+	}
+	
+
+
+	/* file input */
+	
 .file-label{
 	display: block;
 	position: relative;
@@ -1008,7 +1080,7 @@ section ~.feedback  ~ section{
 	background-color: transparent;
 	
 	}
-/* Рамка */
+/* Рамка  для file input*/
 
 .file-label_hr,
 .file-label_vr{
@@ -1072,21 +1144,89 @@ section ~.feedback  ~ section{
 	visibility: hidden;
 
 }
-.file-label {
-	
-	color:var(--white);
+
+
+
+
+.form input[type=file]:hover{
+	color:var(--blue)
 }
+.file-label {
+
+	cursor: pointer;
+	color:var(--white);
+	transition: all .4s ease-in-out;
+}
+
+.file-label:hover {
+	color:var(--blue);
+	
+}
+
+.file-label:hover .file-label_hr:before,
+.file-label:hover .file-label_hr{
+	
+	
+	animation: frameBlueWidth 1s;
+	background-image: linear-gradient(to left, var(--blue) 60%, transparent 40%);
+}
+
+
+
+
+@keyframes frameBlueWidth{
+	0%{
+		background-image: linear-gradient(to left, var(--blue) 60%, transparent 40%);
+		width: 0;
+	}
+	100%{
+		background-image: linear-gradient(to left, var(--blue) 60%, transparent 40%);
+		width: 100%;
+	}
+}
+
+.file-label:hover .file-label_vr:before,
+.file-label:hover .file-label_vr{
+	
+	
+	animation: frameBlueHeight 1s;
+	background-image: linear-gradient(to top, var(--blue) 60%, transparent 40%);
+}
+
+@keyframes frameBlueHeight{
+	0%{
+		background-image: linear-gradient(to top, var(--blue) 60%, transparent 40%);
+		height: 0%;
+	}
+	100%{
+		background-image: linear-gradient(to top, var(--blue) 60%, transparent 40%);
+		height: 100%;
+	}
+
+}
+
+
+
+
+
+
+
 .file-label__text {
 	/* max-width: 186px; */
 	width: 100%;
 	margin: 0 auto;
+	
+
 	
 }
 .file-label__subscribe {
 
 	text-decoration: underline;
 	margin-bottom: 7px;
+	cursor: pointer;
 }
+
+
 .file-label__type {
 	font-size: 12px;
 }
