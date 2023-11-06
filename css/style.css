@@ -855,16 +855,8 @@ margin-top:20px;
 	
 }
 
-.feedback__container{
 
-	position: relative;
-	z-index: 1000;
 
-}
-section ~.feedback  ~ section{
-
-	/* border:1px solid red; */
-}
 
 .feedback:before,
 .feedback:after{
@@ -906,10 +898,7 @@ section ~.feedback  ~ section{
     z-index: 100;
 	
 }
-.feedback__benefit {
-	
 
-}
 .benefit {
 	display: flex;
 	align-items: center;
@@ -1324,7 +1313,43 @@ section ~.feedback  ~ section{
 
 
 
-.feedback__pict {
+
+
+/* feedback__images */
+
+.feedback__images{
+
+
+}
+
+.feedback__images{
+	display: flex;
+	width: 788px;
+	justify-content: flex-start;
+	align-items: center;
+	color:white;
+	text-align: left;
+}
+
+.line{
+	
+}
+.one {
+	width:40px
+}
+.two {
+}
+.three {
+}
+
+
+
+
+.feedback__images div{
+
+	
+
+	
 }
 
 
@@ -1335,6 +1360,20 @@ section ~.feedback  ~ section{
 ._right-pict{
 
 }
+
+
+
+
+
+
+/* Fulldipining */
+
+
+
+
+
+
+
 
 
 .yellow{
