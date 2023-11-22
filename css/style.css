@@ -949,11 +949,16 @@ margin-top:20px;
 	
 	
 }
-/* @media (max-width:1440px){
-	.feedback__title  {
-		max-width: 460px;
+	@media (max-width:1440px){
+		.feedback__title  {
+			max-width: 460px;
+			grid-row:1;
+			margin-left: 0;
+			padding:0;
+			margin-top: 162px;
+
+		}
 	}
-} */
 
 .feedback__text {
 	grid-row-start:2;
@@ -965,11 +970,12 @@ margin-top:20px;
 }
 
 
-/* @media (max-width:1440px){
+@media (max-width:1440px){
 	.feedback__text {
 		max-width: 460px;
+		grid-column-end:2;
 	}
-} */
+}
 
 ._text-blue {
 }
@@ -993,13 +999,14 @@ margin-top:20px;
 
 /* @media(max-width:1440px){
 	.feedback__form {
-		padding:49px 0 0 0;
+		grid-row-start:4;
+	
 	}
 } */
 .form {
 	color:var(--grey);
 
-	max-width: 460px;
+	width: 460px;
 	/* width: 100%; */
 	display: block;
 	font-weight: 300;
@@ -1007,11 +1014,11 @@ margin-top:20px;
 
 }
 
- @media(max-width:1440px){
+ /* @media(max-width:1440px){
 	.feedback__form {
 		width: 460px;
 	}
-} 
+}  */
 .form .label{
 	display: block;
 	position: relative;
@@ -1392,6 +1399,11 @@ margin-top:20px;
 
 @media (max-width:1440px){
 	.feedback__posters{
+		position: absolute;
+		right: 0;
+		margin-top:120px;
+		grid-row:1;
+		/* grid-column-start:4; */
 		margin-left: 0px;
 		width: 460px;
 	}
@@ -1436,12 +1448,12 @@ margin-top:20px;
 }
 
 @media (max-width:1440px){
-	/* .z-yellow{
-		transform: translate(65px,-20px);
-	} */
+	.z-yellow{
+		transform: translate(15px,0px);
+	}
 
 	.z-blue{
-		transform: translate(0,0px);
+		transform: translate(0,-65px);
 	}
 	
 }
@@ -1450,7 +1462,7 @@ margin-top:20px;
 
 
 .feedback__images{
-	position: relative;
+	position: relative	;
 	z-index: 1000;
 	display: flex;
 	width: 100%;
@@ -1465,22 +1477,43 @@ margin-top:20px;
 
 @media (max-width:1440px){
 	.feedback__images{
+		/* position: relative;
+		right: 0; */
 		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+	
+		justify-content: space-between;
+		/* align-items: center; */
 		margin: 0 auto;
 		width: 100%;
-		max-width:296px;
-		 margin-top:0px;
-		margin-right: 0;
+		/* max-width:296px; */
+		 margin-top:20px;
+		/* margin-right: 0; */
 		padding-bottom: 70px; 
+		
 	 }
 } 
 
 
 .feedback__images img{
+	
 	max-width: 296px;
 	
+}
+
+@media (max-width:1440px){
+	.feedback__images img{
+		position: absolute;
+		right: 0;
+	}
+	.feedback__images .feedback__xbox{
+
+	}
+	.feedback__images .feedback__ps5{
+		margin-top:50px;
+		top:351px;
+	}
+
+
 }
 /* @media (max-width:1440px){
 
