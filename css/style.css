@@ -932,6 +932,8 @@ margin-top:20px;
 
 
 
+
+
 .benefit__link{
 	display: block;
 
@@ -990,7 +992,7 @@ margin-top:20px;
 	grid-column-end:4;
 	color:var(--white);
 	max-width: 952px;
-	margin: 25px 0 44px 0;
+	margin: 25px 0 0px 0;
 }
 
 
@@ -1027,13 +1029,14 @@ margin-top:20px;
 	grid-row-start:3;
 	grid-column-start: 1;
 	grid-column-end:3;
-	padding:73px 0 0 0;
+	padding:117px 0 0 0;
 	
 }
 
 @media(max-width:1440px){
 	.feedback__form {
 		grid-row-start:4;
+		padding:98px 0 0 0;
 	
 	}
 }
@@ -1492,8 +1495,9 @@ margin-top:20px;
 	.feedback__backgrounds{
 		/* position: relative; */
 		flex-direction: row;
+		justify-content: space-between;
 		width:100% ;
-		
+		max-width: 788px;
 		
 	}
 }
@@ -1521,30 +1525,30 @@ margin-top:20px;
 
 @media (max-width:1440px){
 	.z-yellow{
-		transform: translate(15px,0px);
+		transform: translate(5px,0px);
 	}
 
 	.z-blue{
-		transform: translate(0,-65px);
+		transform: translate(0,-35px);
 	}
 	
 }
 
 @media (max-width:1023px){
 	.feedback__backgrounds img{
-		width: 350px;
-		display:  none;
+		max-width: 350px;
+		/* display:  none; */
 	}
 
 	
 	.z-yellow{
-		transform: translate(-60px,0px);
+		transform: translate(0px,0px);
 
 	}
 
 	.z-blue{
 
-		transform: translate(100px,0px); 
+		transform: translate(0px,0px);
 	}
 	
 }
@@ -1580,15 +1584,20 @@ margin-top:20px;
 @media (max-width:1023px){
 	.feedback__images{
 		flex-direction: row;
+		align-items: center;
 		max-width: none;
+		width: 100%;
+		margin:0;
+		margin-bottom: 25px;
 
 	}
 }
 
 
-.feedback__images img{
+.feedback__item{
 	
 	max-width: 296px;
+	
 	
 }
 
@@ -1607,13 +1616,24 @@ margin-top:20px;
 }
 
 @media (max-width:1023px){
+	.feedback__item{
+		width: 50%;
+		max-width: 350px;
+		text-align: center;
+		display:flex;
+	justify-content: center;
+	align-items: center;
+	}
 	.feedback__images img{
 		position:relative;
-		width: 202px;
+		width: 210px;
+
 	}
 	.feedback__images .feedback__ps5{
 		margin-top: 0;
 		top:0;
+		
+		
 	}
 }
 
@@ -1632,22 +1652,13 @@ margin-top:20px;
 }
 }
 @media (max-width:1023px){
-	.feedback__xbox{
-		margin-left: 60px;
-
-	}
-
+	
 
 	.feedback__xbox:not(:last-child){
 	margin-bottom: 0px;
 }
 
-    .feedback__ps5{
-		
-		background: url("/img/feedback/z-blue.png") no-repeat;
-		background-size: cover;
-		background-position:center ;
- }
+   
 }
 
 
