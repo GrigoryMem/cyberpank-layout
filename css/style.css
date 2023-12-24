@@ -909,6 +909,13 @@ margin-top:20px;
 }
 
 
+@media(max-width:1023px){
+	.feedback__wrapper{
+		grid-template-columns: 1fr;
+	}
+}
+
+
 
 /* .benefit {
 	display: flex;
@@ -948,8 +955,8 @@ margin-top:20px;
 @media(max-width:1023px){
 
 	.benefit__logo{
-		width: 62px;
-		height: 62px;
+		/* width: 62px;
+		height: 62px; */
 	}
 
 }
@@ -1461,8 +1468,10 @@ margin-top:20px;
 		grid-column:1/5;
 		width:100%;
 		position: relative;
-		margin:120px auto 0 auto;
-		
+		margin-top: 120px;
+		justify-content: center;
+		margin:120px auto 0px auto;
+		max-width: none;
 	
 		
 	}
@@ -1493,17 +1502,17 @@ margin-top:20px;
 
 @media (max-width:1023px){
 	.feedback__backgrounds{
-		/* position: relative; */
+		position: absolute;
 		flex-direction: row;
 		justify-content: space-between;
 		width:100% ;
-		max-width: 788px;
+		max-width: none;
 		
 	}
 }
 
 .feedback__backgrounds img{
-	position: relative;
+	/* position: relative; */
 	z-index: 2;
 	width: 100%;
 	max-width:460px;
@@ -1535,24 +1544,56 @@ margin-top:20px;
 }
 
 @media (max-width:1023px){
+
 	.feedback__backgrounds img{
-		max-width: 350px;
-		/* display:  none; */
+		
+		width:min(50%,500px);
+		 
+	
+	}
+
+	.feedback__backgrounds img:not(:last-child){
+		/* margin-left:32px; */
 	}
 
 	
 	.z-yellow{
 		transform: translate(0px,0px);
+		left:0;
+		
+
 
 	}
 
 	.z-blue{
 
 		transform: translate(0px,0px);
+		right: 0;
 	}
 	
 }
 
+@media (max-width:768px){
+
+	.feedback__backgrounds img{
+		width: min(50%,300px);
+		
+		/* display:  none; */
+	}
+
+}
+
+
+
+@media (max-width:425px){
+
+	.feedback__backgrounds img{
+		width: min(50%,132px);
+		
+		/* display:  none; */
+	}
+
+}
 
 
 
@@ -1583,13 +1624,18 @@ margin-top:20px;
 
 @media (max-width:1023px){
 	.feedback__images{
+		
 		flex-direction: row;
+		/* justify-content: space-evenly; */
 		align-items: center;
 		max-width: none;
 		width: 100%;
-		margin:0;
-		margin-bottom: 25px;
+		
+		margin-top:35px;
 
+	}
+	.feedback__item:first-child{
+		margin-left:120px;
 	}
 }
 
@@ -1605,6 +1651,7 @@ margin-top:20px;
 	.feedback__images img{
 		position: absolute;
 		right: 0;
+		/* display: none; */
 	}
 	.feedback__images .feedback__xbox{
 
@@ -1624,9 +1671,11 @@ margin-top:20px;
 	justify-content: center;
 	align-items: center;
 	}
+
+	
 	.feedback__images img{
 		position:relative;
-		width: 210px;
+		width: minmax(10px,200px);
 
 	}
 	.feedback__images .feedback__ps5{
