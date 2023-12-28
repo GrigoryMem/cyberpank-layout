@@ -919,14 +919,18 @@ margin-top:20px;
 	display:grid;
 	grid-template-columns: repeat(4,auto);
 	align-content:stretch;
-
-	
 }
 
-
+@media(max-width:1024px){
+	.feedback__wrapper{
+		padding: 110px 0 70px;
+		
+	}
+}
 @media(max-width:1023px){
 	.feedback__wrapper{
 		grid-template-columns: 1fr;
+
 	}
 }
 
@@ -1127,7 +1131,7 @@ margin-top:20px;
 	font-family:inherit;
 	font-size:inherit;
 	font-weight: 300;
-	color:var(--grey);
+	color:var(--white);
 	line-height: auto;
 	margin: 0;
 	outline: none;
@@ -1156,7 +1160,7 @@ margin-top:20px;
 
 
   .form input::placeholder{
-	color:var(--grey);
+	color:var(--white);
 	}
 	  input[type=text]:focus::-webkit-input-placeholder,
 	  input[type=email]:focus::-webkit-input-placeholder  {
@@ -1410,6 +1414,7 @@ margin-top:20px;
 
 .form__agreement{
 	font-size: 12px;
+	color:var(--white);
 	
 }
 .form__checkbox:checked,
