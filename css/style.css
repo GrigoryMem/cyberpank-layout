@@ -1161,6 +1161,13 @@ margin-top:20px;
 
   .form input::placeholder{
 	color:var(--white);
+	font-size:18px;
+	}
+
+	@media(max-width:425px){
+		.form input::placeholder{
+			font-size:16px;
+		}
 	}
 	  input[type=text]:focus::-webkit-input-placeholder,
 	  input[type=email]:focus::-webkit-input-placeholder  {
@@ -1370,10 +1377,16 @@ margin-top:20px;
 	/* max-width: 186px; */
 	width: 100%;
 	margin: 0 auto;
-	
-
-	
+	/* font-size: 18px; */
 }
+@media(max-width:425px){
+	.file-label__text{
+		font-size: 16px;
+	}
+}
+
+
+
 .file-label__subscribe {
 
 	text-decoration: underline;
@@ -1399,6 +1412,12 @@ margin-top:20px;
 	padding:19px 50px;
 	box-shadow: 0 4px 4px rgba(0,0,0,0.25);
 	transition: all .3s ease-in-out;
+}
+
+@media(max-width:425px){
+	.form__submit {
+		font-size:16px;
+	}
 }
 
 .form__submit:hover{
