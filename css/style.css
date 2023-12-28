@@ -867,7 +867,8 @@ margin-top:20px;
 	z-index: 900;
 	overflow: hidden;
 
-	margin:-80px 0;
+	/* margin:-80px 0; */
+	margin-bottom: -80px;
 	padding:0 0 70px 0;
 	
 }
