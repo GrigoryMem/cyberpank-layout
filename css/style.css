@@ -879,12 +879,15 @@ margin-top:20px;
 .feedback:before,
 .feedback:after{
 	content:"";
-	display: block;
+	display: none;
 	position: relative;
-	height:70px;
+	border:none;
+	outline: 0px none;
+	background-color: transparent;
+	height:60px;
 	width: 100%;
 	
-	filter: contrast(700%) brightness(120%);
+	filter: contrast(1000%) brightness(1500%);
 	
 	
 	z-index: 5;
@@ -923,6 +926,7 @@ margin-top:20px;
 	display:grid;
 	grid-template-columns: repeat(4,auto);
 	align-content:stretch;
+	padding:15px 0 70px 0;
 }
 
 @media(max-width:1024px){
