@@ -879,15 +879,15 @@ margin-top:20px;
 .feedback:before,
 .feedback:after{
 	content:"";
-	display: none;
+	display: block;
 	position: relative;
 	border:none;
 	outline: 0px none;
 	background-color: transparent;
-	height:60px;
+	height:70px;
 	width: 100%;
 	
-	filter: contrast(1000%) brightness(1500%);
+	filter: contrast(570%) brightness(750%);
 	
 	
 	z-index: 5;
