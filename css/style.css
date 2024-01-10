@@ -864,7 +864,7 @@ margin-top:20px;
 	
 	position:relative;
 	background: var(--black);
-	z-index: 900;
+	z-index: 100;
 	overflow: hidden;
 
 	/* margin:-80px 0; */
@@ -874,11 +874,12 @@ margin-top:20px;
 }
 
 .row_1{
-	position:absolute;
+	position:relative;
 	top:0px;
 	width: 100%;
-	height: 70px;
+	height: 0px;
 	background-color: transparent;
+	border:1px solid red
 }
 
 
@@ -904,8 +905,9 @@ margin-top:20px;
 	
 	top:0px;
 	left:0;
+	z-index: 1000;
 	background: 
-	  linear-gradient(0, rgba(0,0,0,1), rgba(0,0,0,0)),
+	  linear-gradient(0, rgba(0,0,0,1) 5%, rgba(0,0,0,0) 150%),
 	  url(../img/feedback/noise/noise.svg),
 	  var(--white);
 	
