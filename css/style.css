@@ -920,8 +920,9 @@ margin-top:20px;
 	background: 
 	  linear-gradient(0, rgba(0,0,0,1) 5%, rgba(0,0,0,0) 150%),
 	  url(../img/feedback/noise/noise.svg),
-	  var(--white);
+	  var(--yellow);
 	filter: contrast(220%) brightness(200%);
+	transform: rotate(180deg);
 	z-index: 5;
 }
 
