@@ -883,7 +883,9 @@ margin-top:20px;
 	
 }
 
-
+.feedback__row.row_2{
+	background-color: var(--yellow);
+}
 .feedback__row.row_1:before,
 .feedback__row.row_2::before{
 	content:"";
@@ -891,7 +893,6 @@ margin-top:20px;
 	position: absolute;
 	border:none;
 	outline: 0px none;
-	background-color: transparent;
 	height:70px;
 	width: 100%;
 }
@@ -918,9 +919,9 @@ margin-top:20px;
 	left:0;
 	z-index: 1000;
 	background: 
-	  linear-gradient(0, rgba(0,0,0,1) 5%, rgba(0,0,0,0) 150%),
+	  linear-gradient(0, rgba(0,0,0,1) 5%, rgba(0,0,0,0) 170%),
 	  url(../img/feedback/noise/noise.svg),
-	  var(--yellow);
+	  #f8f800;
 	filter: contrast(220%) brightness(200%);
 	transform: rotate(180deg);
 	z-index: 5;
@@ -1895,6 +1896,7 @@ margin-top:20px;
 	position: relative;
 	z-index: 1000;
 	background-color: var(--yellow);
+	/* filter:contrast(600%) brightness(600%); */
 }
 
 ._left-pict img{
