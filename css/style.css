@@ -873,7 +873,8 @@ margin-top:20px;
 	
 }
 
-.row_1{
+.feedback__row.row_1,
+.feedback__row.row_2{
 	position:relative;
 	top:0px;
 	width: 100%;
@@ -883,7 +884,8 @@ margin-top:20px;
 }
 
 
-.row_1:before{
+.feedback__row.row_1:before,
+.feedback__row.row_2::before{
 	content:"";
 	display: block;
 	position: absolute;
@@ -892,16 +894,10 @@ margin-top:20px;
 	background-color: transparent;
 	height:70px;
 	width: 100%;
-	
-	filter: contrast(220%) brightness(200%);
-	
-	
-	z-index: 5;
 }
 
 
-/* grainy edges */
-.row_1:before{
+.feedback__row.row_1:before{
 	
 	top:0px;
 	left:0;
@@ -910,9 +906,26 @@ margin-top:20px;
 	  linear-gradient(0, rgba(0,0,0,1) 5%, rgba(0,0,0,0) 150%),
 	  url(../img/feedback/noise/noise.svg),
 	  var(--white);
-	
-	
+	filter: contrast(220%) brightness(200%);
+	z-index: 5;
 }
+
+
+
+.feedback__row.row_2::before{
+	
+	bottom:0px;
+	left:0;
+	z-index: 1000;
+	background: 
+	  linear-gradient(0, rgba(0,0,0,1) 5%, rgba(0,0,0,0) 150%),
+	  url(../img/feedback/noise/noise.svg),
+	  var(--white);
+	filter: contrast(220%) brightness(200%);
+	z-index: 5;
+}
+
+
 
 /* .feedback__row:after{
 	bottom:0px;
