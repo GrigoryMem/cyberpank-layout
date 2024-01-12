@@ -2,8 +2,8 @@
   <filter id='noiseFilter'>
     <feTurbulence 
       type='turbulence' 
-      baseFrequency='2 6' 
-      numOctaves='7' 
+      baseFrequency='2 2' 
+      numOctaves='10' 
       stitchTiles='stitch'
       seed="1000"
       />
